@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+h3{
+    color: #333;
+    font-size: small;
+
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin:5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.custom-btn {
+    margin: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width:100%;
+}
+
+#startBtn {
+    background-color: #28a745;
+}
+
+#stopBtn {
+    background-color: #dc3545;
+}
+
+#startBtn:disabled, #stopBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#startBtn:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+#stopBtn:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+.message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}

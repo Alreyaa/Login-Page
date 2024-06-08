@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="companylogo.jpeg" alt="Company Logo" class="logo">
+        <h2>Login Page</h2>
+        <h3>Please fill in your login details</h3>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <br>
+        <br>
+    <div class="button-container">
+        <button id="startBtn" class="btn custom-btn">Start</button>
+        <button id="stopBtn" class="btn custom-btn">Stop</button>
+    </div>
+    <div id="message" class="message"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startBtn = document.getElementById('startBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            const messageDiv = document.getElementById('message');
+
+            startBtn.addEventListener('click', () => {
+                console.log('Process started');
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                messageDiv.textContent = 'Process has started.';
+            });
+
+            stopBtn.addEventListener('click', () => {
+                console.log('Process stopped');
+                startBtn.disabled = false;
+                stopBtn.disabled = true;
+                messageDiv.textContent = 'Process has stopped.';
+            });
+
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            messageDiv.textContent = ''; 
+        });
+    </script>
+</body>
+</html>
